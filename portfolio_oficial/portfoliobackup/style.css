@@ -1,0 +1,435 @@
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secundary--color--dark);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary--color--dark: #353535;
+    --secundary--color--dark: #A15AFF;
+    --third--color--dark: #C1C1C1;
+
+    --primary--color--light: #F0F1F3;
+    --secundary--color--light: #A15AFF;
+    --secundary--color--light: #353535;
+
+}
+
+body {
+    transition: 0.2s linear;
+    background-color: var(--primary--color--dark);
+    color: white;
+
+}
+
+body.dark {
+    background-color: var(--primary--color--light);
+    color: black;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: var(--primary--color--dark);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.2);
+}
+
+.label .ball {
+    background-color: var(--primary--color--light);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39f12;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.container__header {
+    width: 80%;
+}
+
+.container__header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 5px 0;
+}
+
+.container__header__menu__img {
+    height: 60px;
+    margin: 2px;
+}
+
+.container__header__menu__list {
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+}
+
+
+.container__header__menu__list__element {
+    list-style-type: none;
+}
+
+.container__header__menu__list__element__link {
+    color: var(--primary--color--light);
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 15px;
+}
+
+.container__header__menu__list__element__link.dark {
+    color: var(--primary--color--dark);
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    padding: 15px;
+}
+
+.container__header__menu__list__element__link:hover {
+    background-color: var(--secundary--color--dark);
+    padding: 15px;
+    border-radius: 30px;
+}
+
+#home {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 200px 0;
+}
+
+.home__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__title {
+    line-height: 80px;
+    font-size: 62px;
+    letter-spacing: 2px;
+}
+
+.home__title__subtitle {
+    margin: 100px 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home__title__subtitle__front {
+    color: var(--secundary--color--dark);
+    font-weight: bold;
+}
+
+.home__img img {
+    width: auto;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.about__main {
+    display: flex;
+    justify-content: center;
+}
+
+#about {
+    width: 80%;
+}
+
+.about__text__title {
+    background-color: #A15AFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    border: #A15AFF;
+    border-radius: 0 50px 50px 0;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.main__container__cards {
+    display: flex;
+}
+
+.container__cards__top__education {
+    background-color: transparent;
+    width: 710px;
+    height: auto;
+}
+
+.container__cards__top__education__Title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 7px 0 0 49px;
+}
+
+.container__cards__top__education__text {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px 0 49px;
+    margin-top: 80px;
+
+}
+
+.container__cards__top__education__subtitle {
+    display: flex;
+    flex-direction: column;
+    line-height: 60px;
+
+}
+
+.container__cards__top__education__nome {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container__cards__top__education__curso {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container__cards__top__education__data__secundary {
+    color: #353535;
+    border: 1px solid #F0F1F3;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #F0F1F3;
+}
+
+.container__cards__top__education__data__secundary.dark {
+    color: var(--primary--color--light);
+    border: 1px solid #F0F1F3;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--primary--color--dark);
+}
+
+
+.container__cards__top__InterpersonalSkills {
+    background-color: #BE8DFF;
+    border-radius: 50px 50px 50px 0;
+    width: 710px;
+    height: 750px;
+    padding: 7px 0 0 49px;
+}
+
+.container__cards__top__InterpersonalSkills__Title {
+    font-size: 36px;
+    font-weight: bold;
+
+
+}
+
+.container__cards__top__InterpersonalSkills__text {
+    display: flex;
+    margin-top: 50px;
+}
+
+.a {
+    display: flex;
+    height: 150px;
+    width: 3px;
+    background-color: var(--primary--color--light);
+}
+
+.a.dark {
+    display: flex;
+    height: 150px;
+    width: 3px;
+    background-color: var(--primary--color--dark);
+}
+
+
+.container__cards__top__InterpersonalSkills__subtitle {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 45px;
+    line-height: 48px;
+}
+
+.container__cards__top__InterpersonalSkills__Title2 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 150px;
+
+}
+
+.container__cards__top__InterpersonalSkills__body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 50px;
+    line-height: 31px;
+
+}
+
+.container__cards__bottom__TechnicalSkills {
+    background-color: black;
+    border-radius: 50px 0px 50px 50px;
+    width: 710px;
+    height: 710px;
+}
+
+.container__cards__bottom__TechnicalSkills__Title {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 29px 0 0 49px;
+    color: var(--primary--color--light);
+}
+
+.container__cards__bottom__TechnicalSkills__Title.dark {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 25px 0 0 49px;
+    color: var(--primary--color--light);
+}
+
+.container__cards__bottom__ProfessionalExperience {
+    background-color: transparent;
+    border-radius: 50px 50px 50px 0;
+    width: 710px;
+    height: 750px;
+}
+
+.container__cards__bottom__ProfessionalExperience__Title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 25px;
+    padding: 1px 0 0 49px;
+}
+
+.container__cards__bottom__TechnicalSkills__icons img {
+    justify-content: space-around;
+    gap: 40px;
+    margin: 50px 49px 0 110px;
+}
+
+.container__cards__bottom__ProfessionalExperience__text {
+    display: flex;
+    margin-top: 50px;
+}
+
+.container__cards__bottom__ProfessionalExperience__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 10px 0px 0px 26px;
+    line-height: 35px;
+}
+
+.container__cards__bottom__ProfessionalExperience__name {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container__cards__bottom__ProfessionalExperience__office {
+    font-family: 'Montserrat', sans-serif;   
+    font-size: 18px;
+}
+
+.container__cards__bottom__ProfessionalExperience__function {
+    font-family: 'Montserrat', sans-serif;   
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.container__cards__bottom__ProfessionalExperience__data__secundary {
+    color: #353535;
+    border: 1px solid #F0F1F3;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.container__cards__bottom__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container__cards__bottom__ProfessionalExperience {
+    position: relative;
+    width: 710px;
+    height: 750px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.5s;
+  }
+
+  .container__cards__bottom__ProfessionalExperience:hover {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    position: absolute;
+    width: 710px;
+    height: 750px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .click-here {
+    margin: auto;
+  }
